@@ -16,6 +16,19 @@ function guess(){
     let input = document.getElementById("guess");
     let letter = input.value.toLowerCase();
     input.value = "";   // clear the input field on every guess
+
+    let guessArea = document.getElementById("guesses");
+
+    // don't allow guesses before a word is chosen
+    if(word == ""){
+        guessArea.textContent = "Press New Game before guessing!";
+        return;
+    }
+
+    // ignore an empty guess
+    if(letter == ""){
+        return;
+    }
     if(word.indexOf(letter)<0){
         guessCount--;
     }
