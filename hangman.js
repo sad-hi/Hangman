@@ -28,6 +28,11 @@ function guess(){
         return;
     }
 
+    // don't allow guesses when the game is finished
+    if(gameOver){
+        return;
+    }
+
     // ignore an empty guess
     if(letter == ""){
         return;
