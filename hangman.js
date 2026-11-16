@@ -1,5 +1,5 @@
-let POSSIBLE_WORDS= ["obdurate", "verisimilitude",
-    "obsequious", "dissonant", "toady"];
+let POSSIBLE_WORDS= ["obdurate", "verisimilitude", "defenestrate",
+    "obsequious", "dissonant", "toady", "imdempotent"];
 let guesses = "";
 let word="";
 let MAX_GUESSES=6;
