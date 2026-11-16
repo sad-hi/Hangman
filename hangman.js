@@ -4,9 +4,12 @@ let guesses = "";
 let word="";
 let MAX_GUESSES=6;
 let guessCount = MAX_GUESSES;
+let gameOver = false;   // true when the player wins or loses
+
 function newGame(){
     guesses="";
     guessCount = MAX_GUESSES;
+    gameOver = false;   // reset for the new game
     let randomIndex = parseInt(
         Math.random()* POSSIBLE_WORDS.length);
     word = POSSIBLE_WORDS[randomIndex];
@@ -61,4 +64,14 @@ function updateScreen(){
 
     let image = document.getElementById("hangmanpic");
     image.src = `images/hangman${guessCount}.gif`;
+
+    // win / lose message in the guesses area
+    if(clueString.indexOf("_") < 0){
+        guessArea.textContent = "You win! The word was " + word + ".";
+        gameOver = true;
+    }
+    else if(guessCount <= 0){
+        guessArea.textContent = "You lose! The word was " + word + ".";
+        gameOver = true;
+    }
 }
