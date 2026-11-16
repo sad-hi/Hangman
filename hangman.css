@@ -1,11 +1,11 @@
-body {
+body{
     text-align: center;
+}
+#clue{
     font-family: monospace;
+    font-size:2em;
+    padding:1em;
 }
-#clue {
-    font-size: 2em;
-    margin: 20px;
-}
-#guesses, #newgamearea {
-    margin: 20px;
+#newgamearea{
+    margin-top: 2em;
 }
