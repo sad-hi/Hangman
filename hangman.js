@@ -29,6 +29,13 @@ function guess(){
     if(letter == ""){
         return;
     }
+
+    // don't allow the same letter to be guessed twice
+    if(guesses.indexOf(letter) >= 0){
+        guessArea.textContent = "You already guessed " + letter +
+            "! Guessed Letters: " + guesses;
+        return;
+    }
     if(word.indexOf(letter)<0){
         guessCount--;
     }
