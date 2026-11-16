@@ -14,7 +14,8 @@ function newGame(){
 }
 function guess(){
     let input = document.getElementById("guess");
-    let letter = input.value;
+    let letter = input.value.toLowerCase();
+    input.value = "";   // clear the input field on every guess
     if(word.indexOf(letter)<0){
         guessCount--;
     }
